@@ -1,0 +1,21 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: info
+    com.stf: debug
+  file:
+    path: logs
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jianshu?useUnicode=true&characterEncoding=utf-8
+    password: hbstudent
+    username: hbstudent
+  jpa:
+    show-sql: true
+#don't use ddl-auto in real project
+    hibernate:
+      ddl-auto: update
+#      使用generate-ddl:根据Entity建表
+#    generate-ddl: false
